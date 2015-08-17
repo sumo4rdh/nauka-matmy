@@ -1,12 +1,35 @@
-p{
- margin-left: 10px;   
+h5{
+   
+    color: white;
 }
 
 .rozwDzialania{
     margin: 15px;
-    
+}
+.black{
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4)
+}
+.menue{
+    padding: auto;
+    margin-top: 50px;
+    background-color: darkblue;
+    padding: 10px;
+    width: 130px;
+}
+.men2{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    width: 130px;
+    background-color: black;
     
 }
+    
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;

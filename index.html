@@ -10,12 +10,27 @@
     <head>
     </head>
     <body>
+        <div id="czystka" class="black wraper ">
+            <div class="row">
+            <div class="menue text-center center-block">
+                <h5>Wybierz Tryb</h5>
+            </div>
+            <div class="men2 text-center center-block">
+                    <ul class="list-unstyled">
+                       <li> <button class="btn btn-primary btn-block tryb nauczsie " type="button" onclick="">Nauka liczenia</button> </li>
+                       <li> <button class="btn btn-primary btn-block tryb dzialajsie " type="button" onclick="">Nauka działań</button> </li>
+                       <li> <button id="czy" class="btn btn-primary btn-block tryb sprawdzsie " type="button" onclick="czysc()">Sprawdź się</button> </li>
+                    </ul>
+            </div>
+            </div>
+        </div>
         <div id="wrapper">
             <div id="invi"><input type="text" id="niewidzialny"></div>
 
             <!-- BUTOOOONY -->
             <div id="sidebar-wrapper">
                 <div class="col-xs-12">
+                    <button class="btn btn-primary btn-lg btn-block tryb " type="button" >Wybór trybu</button>
                     <button class="btn btn-primary btn-lg btn-block" type="button" onclick="losowanie()">losuj liczby</button> 
                     <button class="btn btn-primary btn-lg btn-block" type="button" onclick="sprawdz()">Sprawdz</button>
                     <button class="btn btn-primary btn-lg btn-block rozw" type="button" onclick="dzialania()">Opcje</button>
@@ -39,7 +54,7 @@
                 </div>
             </div>
              <div id="page-content-wrapper">
-                <div class="container">
+                <div class="container sprawdzian">
                     <div class="row">
                         <div class="col-sm-3"><h1 id="3"></h1></div>
                         <div class="col-sm-1"><h1><input type="number" id="spr" placeholder="wynik" onkeydown="javascript:return fnIgnoreEnter(event);" ></h1></div><div class="col-sm-1"><h1></h1></div>
@@ -57,6 +72,11 @@
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <h1 id="obliczono"></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h1 id="licznik"></h1>
                         </div>
                     </div>
                 </div> 
