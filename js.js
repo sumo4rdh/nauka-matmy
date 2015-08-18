@@ -32,7 +32,9 @@ function czyszczenie() {
 function losowanie() {
     zakres();
     czyszczenie();
+    if(document.getElementById("licznik").innerHTML == ""){
     timer();
+    }
     var pierwsza = Math.round(Math.random() * (document.getElementById("zakresLiczenia").value - 1) + 1), druga = Math.round(Math.random() * (document.getElementById("zakresLiczenia").value - 1) + 1), obliczenie, form = document.getElementById('niewidzialny'), i = Math.round(Math.random() * (elementy.length - 1)), z = document.getElementById('3'), wyn = document.getElementById('wynik');
     z.innerHTML = pierwsza + "  " + elementy[i] + "  " + druga + "  =";
     switch (elementy[i]) {
@@ -85,17 +87,14 @@ function decrement() {
 /////////////////////// Timer ////////////////////
 function timer(){
     
-    var myVar = setInterval(function(){myTimer()},1000);
-    var d = 10;
+    var myVar = setInterval(function() {myTimer()}, 1000), d = 10;
     function myTimer() {
-    
-        d -=1;
-            if (d <= 0){
-                document.getElementById("licznik").innerHTML = "";
-                sprawdz();
-                clearInterval(myTimer());
-                
-            }
-        document.getElementById("licznik").innerHTML = d;
+        d -= 1;
+        if (d <= 0){
+            document.getElementById("licznik").innerHTML = "";
+            sprawdz();
+            clearInterval(myVar);
+            console.log("wyczyszczono");
+        } else document.getElementById("licznik").innerHTML = d;
     }
 }
