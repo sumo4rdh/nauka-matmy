@@ -31,9 +31,11 @@
             <div id="sidebar-wrapper">
                 <div class="col-xs-12">
                     <button class="btn btn-primary btn-lg btn-block tryb " type="button" >Wybór trybu</button>
+                    <button class="btn btn-primary btn-lg btn-block" type="button" onclick="random()">losuj liczby</button> 
                     <button class="btn btn-primary btn-lg btn-block" type="button" onclick="losowanie()">losuj liczby</button> 
-                    <button class="btn btn-primary btn-lg btn-block" type="button" onclick="sprawdz()">Sprawdz</button>
+                    <button class="btn btn-primary btn-lg btn-block" id="zdj" type="button" onclick="sprawdz()">Sprawdz</button>
                     <button class="btn btn-primary btn-lg btn-block rozw" type="button" onclick="dzialania()">Opcje</button>
+                    
                     
                 
                     <div id="text" class="rozwDzialania">
@@ -54,6 +56,22 @@
                 </div>
             </div>
              <div id="page-content-wrapper">
+                 
+ <!-------------------------NAUCZANIE------------------------------>                
+                 
+                 <div class="container nauczanie">
+                    <div class="row">
+                        
+                        <div class="col-sm-3 zwin text-left">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GU9uO0tCp70" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="col-xs-1 text-right">
+  <span class="glyphicon glyphicon-remove zwijacz" aria-hidden="true"></span></div>
+                     </div>
+                     <div class="row">
+                       <div id="rand" class="col-sm-12 "></div>
+                    </div>
+                </div> 
+ <!-------------------------sprawdzian------------------------------>  
                 <div class="container sprawdzian">
                     <div class="row">
                         <div class="col-sm-3"><h1 id="3"></h1></div>

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     $(".rozwDzialania" ).slideToggle();
     $( ".rozw" ).click(function() {
         $(".rozwDzialania" ).slideToggle();
@@ -21,7 +22,13 @@ $(document).ready(function() {
         $(".nauczanie").hide();
         $(".dzialania").show();
     });
+   $('.zwijacz').click(function() {
+    	$(".zwin").slideToggle();
+       
+    });
+    
+
+    
     
 });
-
 

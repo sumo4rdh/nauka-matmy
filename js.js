@@ -98,3 +98,22 @@ function timer(){
         } else document.getElementById("licznik").innerHTML = d;
     }
 }
+/////////////////////// Nauczanie ////////////////////
+function random() {
+    var iloscObrazkow;
+    iloscObrazkow = Math.round(Math.random() * (10 + 1));
+    for(iloscObrazkow; iloscObrazkow >= 0; iloscObrazkow--){    
+    var para = document.createElement("img");
+    para.setAttribute('src',"img/kulka.png");
+    para.setAttribute('class', "nieaktywny");
+    para.setAttribute('onclick', "usun()");
+         
+   
+    var element = document.getElementById("rand");
+    element.appendChild(para);
+    }
+}
+function usun(){
+     var element = document.getElementById("rand");
+     element.removeChild(element.childNodes[0]);
+}

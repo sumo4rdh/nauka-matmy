@@ -28,7 +28,12 @@ h5{
     background-color: black;
     
 }
-    
+.nieaktywny{
+    opacity : 0.70;
+    filter : alpha(opacity=70);    
+}
+
+
 
 #wrapper {
     padding-left: 0;
