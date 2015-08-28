@@ -1,3 +1,8 @@
+/////////////////////// GLOBALNE ZMIENNE////////////////////
+var licznikKulek = 0;
+
+
+
 /////////////////////// SPRAWDZENIE ////////////////////
 
 function sprawdz() {
@@ -25,6 +30,9 @@ function czyszczenie() {
     document.getElementById('odpowiedz').innerHTML = "";
     document.getElementById('obliczono').innerHTML = "";
     document.getElementById('opinia').innerHTML = "";
+    document.getElementById('rand').innerHTML = "";
+    document.getElementById("licznik").innerHTML = "";	
+    licznikKulek = 0;
 }
        
 /////////////////////// Losowanie ////////////////////
@@ -100,20 +108,27 @@ function timer(){
 }
 /////////////////////// Nauczanie ////////////////////
 function random() {
+    czyszczenie();
     var iloscObrazkow;
     iloscObrazkow = Math.round(Math.random() * (10 + 1));
     for(iloscObrazkow; iloscObrazkow >= 0; iloscObrazkow--){    
     var para = document.createElement("img");
     para.setAttribute('src',"img/kulka.png");
     para.setAttribute('class', "nieaktywny");
-    para.setAttribute('onclick', "usun()");
+    para.setAttribute('onclick', "usun(this)");
          
    
     var element = document.getElementById("rand");
     element.appendChild(para);
     }
 }
-function usun(){
-     var element = document.getElementById("rand");
-     element.removeChild(element.childNodes[0]);
+function usun(ten){
+     if(ten.style.opacity == 1){
+         ten.style.opacity = "0.7";
+         licznikKulek -= 1;
+     }else{
+         ten.style.opacity = "1";
+         licznikKulek += 1;
+     }
+     document.getElementById("licz").innerHTML = licznikKulek;
 }

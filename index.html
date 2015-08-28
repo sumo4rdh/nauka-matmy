@@ -12,16 +12,16 @@
     <body>
         <div id="czystka" class="black wraper ">
             <div class="row">
-            <div class="menue text-center center-block">
-                <h5>Wybierz Tryb</h5>
-            </div>
-            <div class="men2 text-center center-block">
+                <div class="menue text-center center-block">
+                    <h5>Wybierz Tryb</h5>
+                </div>
+                <div class="men2 text-center center-block">
                     <ul class="list-unstyled">
-                       <li> <button class="btn btn-primary btn-block tryb nauczsie " type="button">Nauka liczenia</button> </li>
-                       <li> <button class="btn btn-primary btn-block tryb dzialajsie " type="button">Nauka działań</button> </li>
-                       <li> <button id="czy" class="btn btn-primary btn-block tryb sprawdzsie " type="button">Sprawdź się</button> </li>
+                        <li> <button class="btn btn-primary btn-block tryb nauczsie " type="button">Nauka liczenia</button> </li>
+                   <!--    <li> <button class="btn btn-primary btn-block tryb dzialajsie " type="button">Nauka działań</button> </li> -->
+                        <li> <button id="czy" class="btn btn-primary btn-block tryb sprawdzsie " type="button">Sprawdź się</button> </li>
                     </ul>
-            </div>
+                </div>
             </div>
         </div>
         <div id="wrapper">
@@ -31,12 +31,12 @@
             <div id="sidebar-wrapper">
                 <div class="col-xs-12">
                     <button class="btn btn-primary btn-lg btn-block tryb " type="button" >Wybór trybu</button>
-                    <button class="btn btn-primary btn-lg btn-block" type="button" onclick="random()">losuj liczby</button> 
-                    <button class="btn btn-primary btn-lg btn-block" type="button" onclick="losowanie()">losuj liczby</button> 
-                    <button class="btn btn-primary btn-lg btn-block" id="zdj" type="button" onclick="sprawdz()">Sprawdz</button>
+                    <button class="btn btn-primary btn-lg btn-block nauczanie" type="button" onclick="random()">losuj liczby</button> 
+                    <button class="btn btn-primary btn-lg btn-block sprawdzian" type="button" onclick="losowanie()">losuj liczby</button> 
+                <!--    <button class="btn btn-primary btn-lg btn-block" id="zdj" type="button" onclick="sprawdz()">Sprawdz</button> -->
                     <button class="btn btn-primary btn-lg btn-block rozw" type="button" onclick="dzialania()">Opcje</button>
                     
-                    
+<!-------------------------Sprawdzanie------------------------------>                      
                 
                     <div id="text" class="rozwDzialania">
                         <h3>Zakres działań</h3>
@@ -55,24 +55,25 @@
                     </div>
                 </div>
             </div>
-             <div id="page-content-wrapper">
+             
                  
  <!-------------------------NAUCZANIE------------------------------>                
-                 
-                 <div class="container nauczanie">
+             <div id="page-content-wrapper">    
+                 <div class="container-fluid nauczanie">
                     <div class="row">
+                        <div class="col-sm-3  text-left">
+                            <span class="glyphicon glyphicon-remove zwijacz" aria-hidden="true"></span>
+                            <iframe class="zwin" width="560" height="315" src="https://www.youtube.com/embed/GU9uO0tCp70" frameborder="0" allowfullscreen></iframe>
+                        </div>
                         
-                        <div class="col-sm-3 zwin text-left">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GU9uO0tCp70" frameborder="0" allowfullscreen></iframe></div>
-                        <div class="col-xs-1 text-right">
-  <span class="glyphicon glyphicon-remove zwijacz" aria-hidden="true"></span></div>
                      </div>
                      <div class="row">
                        <div id="rand" class="col-sm-12 "></div>
+                       <h1 id="licz"></h1>
                     </div>
                 </div> 
  <!-------------------------sprawdzian------------------------------>  
-                <div class="container sprawdzian">
+                <div class="container-fluid sprawdzian">
                     <div class="row">
                         <div class="col-sm-3"><h1 id="3"></h1></div>
                         <div class="col-sm-1"><h1><input type="number" id="spr" placeholder="wynik" onkeydown="javascript:return fnIgnoreEnter(event);" ></h1></div><div class="col-sm-1"><h1></h1></div>
