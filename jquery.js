@@ -15,6 +15,7 @@ $(document).ready(function() {
      $('.nauczsie').click(function() {
     	$(".sprawdzian").hide();
         $(".nauczanie").show();
+        random();
         $(".dzialania").hide();
     });
      $('.dzialajsie').click(function() {

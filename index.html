@@ -19,7 +19,9 @@
                     <ul class="list-unstyled">
                         <li> <button class="btn btn-primary btn-block tryb nauczsie " type="button">Nauka liczenia</button> </li>
                    <!--    <li> <button class="btn btn-primary btn-block tryb dzialajsie " type="button">Nauka działań</button> </li> -->
-                        <li> <button id="czy" class="btn btn-primary btn-block tryb sprawdzsie " type="button">Sprawdź się</button> </li>
+                        <li> <button id="czy" class="btn btn-primary btn-block tryb sprawdzsie " type="button">Sprawdź się</button>
+
+                         </li>
                     </ul>
                 </div>
             </div>
@@ -31,13 +33,13 @@
             <div id="sidebar-wrapper">
                 <div class="col-xs-12">
                     <button class="btn btn-primary btn-lg btn-block tryb " type="button" >Wybór trybu</button>
-                    <button class="btn btn-primary btn-lg btn-block nauczanie" type="button" onclick="random()">losuj liczby</button> 
-                    <button class="btn btn-primary btn-lg btn-block sprawdzian" type="button" onclick="losowanie()">losuj liczby</button> 
+                    <button class="btn btn-primary btn-lg btn-block nauczanie" type="button" onclick="random()">losuj liczby</button>
+                    <button class="btn btn-primary btn-lg btn-block sprawdzian" type="button" onclick="losowanie()">losuj liczby</button>
                 <!--    <button class="btn btn-primary btn-lg btn-block" id="zdj" type="button" onclick="sprawdz()">Sprawdz</button> -->
                     <button class="btn btn-primary btn-lg btn-block rozw" type="button" onclick="dzialania()">Opcje</button>
-                    
-<!-------------------------Sprawdzanie------------------------------>                      
-                
+
+<!-------------------------Sprawdzanie------------------------------>
+
                     <div id="text" class="rozwDzialania">
                         <h3>Zakres działań</h3>
                         <form class="form-inline">
@@ -55,27 +57,34 @@
                     </div>
                 </div>
             </div>
-             
-                 
- <!-------------------------NAUCZANIE------------------------------>                
-             <div id="page-content-wrapper">    
-                 <div class="container-fluid nauczanie">
+
+
+ <!-------------------------NAUCZANIE------------------------------>
+             <div id="page-content-wrapper" >
+                 <div class="container-fluid nauczanie " style="display: none">
                     <div class="row">
                         <div class="col-sm-3  text-left">
                             <span class="glyphicon glyphicon-remove zwijacz" aria-hidden="true"></span>
                             <iframe class="zwin" width="560" height="315" src="https://www.youtube.com/embed/GU9uO0tCp70" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        
+
                      </div>
+                     <div class="row">
+                        <div class="col-sm-10"><h2>Zaznacz <span id="KulkiDoZaznaczenia"></span> kulek </h2></div>
+                    </div>
                      <div class="row">
                        <div id="rand" class="col-sm-12 "></div>
                        <h1 id="licz"></h1>
                     </div>
-                </div> 
- <!-------------------------sprawdzian------------------------------>  
-                <div class="container-fluid sprawdzian">
+                </div>
+ <!-------------------------sprawdzian------------------------------>
+                <div class="container-fluid sprawdzian" style="display: none">
+                    <div class="row">
+                        <div class="col-sm-10"><h2>W celu sprawdzenie się kliknij losuj liczby</h2></div>
+                    </div>
                     <div class="row">
                         <div class="col-sm-3"><h1 id="3"></h1></div>
+                        
                         <div class="col-sm-1"><h1><input type="number" id="spr" placeholder="wynik" onkeydown="javascript:return fnIgnoreEnter(event);" ></h1></div><div class="col-sm-1"><h1></h1></div>
                     </div>
                     <div class="row">
@@ -98,7 +107,7 @@
                             <h1 id="licznik"></h1>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </body>

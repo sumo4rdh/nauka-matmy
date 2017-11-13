@@ -9,10 +9,13 @@ function sprawdz() {
     var p = document.getElementById('wy'), niewidz = document.getElementById('spr').value, wyna = document.getElementById('niewidzialny').value;
     document.getElementById('odpowiedz').innerHTML = "Prawidlowa odpowiedz to:";
     document.getElementById('obliczono').innerHTML = wyna;
+    var podsumowanie = document.getElementById('opinia');
     if (wyna == niewidz) {
-        document.getElementById('opinia').innerHTML = "Twój wynik jest poprawny";
+        podsumowanie.innerHTML = "Twój wynik jest poprawny";
+        podsumowanie.style.color = "Green";
     } else {
-        document.getElementById('opinia').innerHTML = "oj oj coś poszło nie tak :( masz zły wynik";
+        podsumowanie.innerHTML = "oj oj coś poszło nie tak :( masz zły wynik";
+        podsumowanie.style.color = "red";
 
     }
 }
@@ -31,10 +34,10 @@ function czyszczenie() {
     document.getElementById('obliczono').innerHTML = "";
     document.getElementById('opinia').innerHTML = "";
     document.getElementById('rand').innerHTML = "";
-    document.getElementById("licznik").innerHTML = "";	
+    document.getElementById("licznik").innerHTML = "";
     licznikKulek = 0;
 }
-       
+
 /////////////////////// Losowanie ////////////////////
 
 function losowanie() {
@@ -63,7 +66,7 @@ function losowanie() {
 }
 
 
- /////////////////////// Ustawianie Zakresu ////////////////////  
+ /////////////////////// Ustawianie Zakresu ////////////////////
  /////////////////////// działania         ////////////////////
 function zakres() {
     elementy = [];
@@ -82,19 +85,19 @@ function zakres() {
 }
  /////////////////////// Wartości do obliczenia ////////////////////
 function increment() {
-    zakresliczenia = document.getElementById("zakresLiczenia").value; 
+    zakresliczenia = document.getElementById("zakresLiczenia").value;
     zakresliczenia = parseInt(zakresliczenia) + 1;
     document.getElementById("zakresLiczenia").value = zakresliczenia;
 }
 function decrement() {
-    zakresliczenia = document.getElementById("zakresLiczenia").value; 
+    zakresliczenia = document.getElementById("zakresLiczenia").value;
     zakresliczenia = parseInt(zakresliczenia) - 1;
-    document.getElementById("zakresLiczenia").value = zakresliczenia;    
+    document.getElementById("zakresLiczenia").value = zakresliczenia;
 }
 
 /////////////////////// Timer ////////////////////
 function timer(){
-    
+
     var myVar = setInterval(function() {myTimer()}, 1000), d = 10;
     function myTimer() {
         d -= 1;
@@ -110,17 +113,20 @@ function timer(){
 function random() {
     czyszczenie();
     var iloscObrazkow;
+    var kulki = document.getElementById("KulkiDoZaznaczenia");
     iloscObrazkow = Math.round(Math.random() * (10 + 1));
-    for(iloscObrazkow; iloscObrazkow >= 0; iloscObrazkow--){    
+    kulki.innerHTML = iloscObrazkow - 2;
+    for(iloscObrazkow; iloscObrazkow >= 0; iloscObrazkow--){
     var para = document.createElement("img");
     para.setAttribute('src',"img/kulka.png");
     para.setAttribute('class', "nieaktywny");
     para.setAttribute('onclick', "usun(this)");
-         
-   
+
+
     var element = document.getElementById("rand");
     element.appendChild(para);
     }
+
 }
 function usun(ten){
      if(ten.style.opacity == 1){
